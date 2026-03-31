@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PaaS Demo</title>
+
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        background: #f5f5f5;
+        color: #222;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        text-align: center;
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        width: 300px;
+      }
+
+      h1 {
+        margin-bottom: 10px;
+        font-size: 22px;
+      }
+
+      p {
+        color: #666;
+        font-size: 14px;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 8px 16px;
+        border: 1px solid #ddd;
+        background: transparent;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #f0f0f0;
+      }
+
+      .version {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #999;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>PaaS Demo</h1>
+      <p>Auto deploy GitHub → Vercel</p>
+
+      <p id="message">Klik tombol untuk tes</p>
+      <button onclick="changeText()">Klik</button>
+
+      <div class="version">versi: <span id="version">v1</span></div>
+    </div>
+
+    <script>
+      function changeText() {
+        document.getElementById("message").innerText = "Berjalan di Vercel ✔";
+      }
+    </script>
+  </body>
+</html>
